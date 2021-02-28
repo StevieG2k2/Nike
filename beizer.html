@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Beizer</title>
+		<link rel="stylesheet" href="stil.css"/>
+	</head>
+	<body>
+
+		<div class="navbar">
+			<ul>
+				<li><img src="napis.png" id="ime"></li>
+				<li><a href="svg.html">SVG</a></li>
+				<li><a class="active" href="beizer.html">Beizer</a></li>
+				<li><a href="index.html">Slika</a></li>
+				<li><p id="avtor">Jernej Petrovčič</p></li>
+			</ul>
+		</div>
+
+		<div id="glavni">
+		  <p>Logotip Nike izrisan z Beizer krivuljo na sliko čevlja</p>
+		  <img src="sus.png" alt="suln" id="beziersus">
+		  <img src="napis.png" alt="napis" id="napis">
+		  <canvas id="myCanvas"></canvas>
+		</div>
+		<script>
+		  var canvas = document.getElementById('myCanvas');
+		  var context = canvas.getContext('2d');
+
+		  context.beginPath();
+		  context.moveTo(53.3, 3.3);
+		  context.bezierCurveTo(-23.3, 83.3, -36.6, 216.6, 300, 3.3);
+		  context.bezierCurveTo( 93.3, 76.6, 6.6, 106.6, 52.6, 4.3);
+		  context.lineWidth = 1;
+
+		  // line color
+		  context.strokeStyle = 'black';
+		  context.stroke();
+		  context.fillStyle='black';
+		  context.fill();
+		</script>
+		<p id="avtor">Jernej Petrovčič</p>
+	</body>
+</html>
